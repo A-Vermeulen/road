@@ -9,13 +9,63 @@ ex: background: green;
 ex: background-image = url('http://www.vanessametonini.com.br/imersaocss/a1/img/fundo.jpg');
 */
 
+
+/* Reset do CSS : */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* retira todas as pre-configurações do HTML */
+
+
+/*           -------      BODY GERAL       --------        */
+
 body {
-    background-image: url('http://www.vanessametonini.com.br/imersaocss/a1/img/fundo.jpg');
+    background-image: url('../img/fundo.jpg');
     background-size: auto 100vh;
     height: 100vh;
-    /*unidade que ajusta a 100% o tamanho da tela matendo a proporção do eixo horizontal e 100% da altura (auto, 100vh)*/
+    /* background image pode ser via url tb: url('http://www.vanessametonini.com.br/imersaocss/a1/img/fundo.jpg')
+    
+    unidade que ajusta a 100% o tamanho da tela mantendo a proporção do eixo horizontal e 100% da altura (auto, 100vh)*/
     font-family: Verdana;
 }
+
+
+/* Se a tela tiver ao menos 400px e outra com 600px
+   Iphone 6 tem 375 de largura, 
+   irá carregar estes estilos abaixo*/
+
+
+  /* o none disse é breakpoint */ 
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+
+/*           ------- HEADER GERAL MENU, TEXTO --------        */
+
+header {
+    height: 70vh;
+    display: flex;
+    /* flex : Macete para centralizar vertivalmente, transforma tudo em coluna */
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*           ------- CLASSE MENU --------        */
 
 
 /* chamando uma classe do HTML, usa um ponto */
@@ -23,6 +73,12 @@ body {
 .menu {
     background-color: white;
     /*barra fica branca*/
+    position: fixed;
+    top: 0;
+    /* o position fixa o menu e o top deixa ele fixado no topo da tela sempre nas rolagens tb */
+    width: 100vw;
+    /* box-shadow: aqua 10px 10px 50px 0px; cor, deslocamento do eixo x, deslocamento do eixo y, qual nítido ou esfumaçando é a sombra, 
+    escala da sombra, se for 0 é o mesmo tamanho da caixa. */
 }
 
 .menu li {
@@ -37,6 +93,15 @@ body {
     /*inclui um espaço entre as colunas */
 }
 
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    background-color: revert;
+}
+
+
+/*           ------- CLASSE SITE-SUBTTLE/TITLE --------        */
+
 
 /* abaixo aproveitamos duas classes com os mesmos atributos e nao precisamos escrever duas vezes o código. bota uma classe, virgula e depois a outra com os atributos iguais. */
 
@@ -46,9 +111,24 @@ body {
     text-align: center;
 }
 
+.site-title {
+    font-size: 2em;
+}
+
 .site-subtitle {
     font-style: italic;
 }
+
+
+/*           ------- CLASSE IMAGEM - IMG-PORTFOLIO -------      */
+
+.img-portfolio {
+    width: 180px;
+    height: 180px;
+}
+
+
+/*           ------- TEXT-DECORATIONS ISOLADAS --------        */
 
 
 /*text-decoration:  dependendo da tag faz várias alterações no texto. no caso de um link , tag <a> ele já está padrão underline, se quiser tirar o sublinhado, bota none; */
