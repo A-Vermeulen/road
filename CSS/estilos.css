@@ -1,150 +1,163 @@
-/* Aula inicial :D */
-
-
-/* Body: envolve todo o corpo do site,tudo. */
-
-
-/* Alterar fundo = background 
+                /* Aula inicial :D */
+                /* Body: envolve todo o corpo do site,tudo. */
+                /* Alterar fundo = background 
 ex: background: green;
 ex: background-image = url('http://www.vanessametonini.com.br/imersaocss/a1/img/fundo.jpg');
 */
-
-
-/* Reset do CSS : */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-/* retira todas as pre-configurações do HTML */
-
-
-/*           -------      BODY GERAL       --------        */
-
-body {
-    background-image: url('../img/fundo.jpg');
-    background-size: auto 100vh;
-    height: 100vh;
-    /* background image pode ser via url tb: url('http://www.vanessametonini.com.br/imersaocss/a1/img/fundo.jpg')
+                /* Reset do CSS : */
+                
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                /* retira todas as pre-configurações do HTML */
+                /*           -------      BODY GERAL       --------        */
+                
+                body {
+                    background-image: url('../img/fundo.jpg');
+                    background-size: auto 100vh;
+                    height: 100vh;
+                    /* background image pode ser via url tb: url('http://www.vanessametonini.com.br/imersaocss/a1/img/fundo.jpg')
     
     unidade que ajusta a 100% o tamanho da tela mantendo a proporção do eixo horizontal e 100% da altura (auto, 100vh)*/
-    font-family: Verdana;
-}
-
-
-/* Se a tela tiver ao menos 400px e outra com 600px
+                    font-family: Verdana;
+                }
+                /* Se a tela tiver ao menos 400px e outra com 600px
    Iphone 6 tem 375 de largura, 
    irá carregar estes estilos abaixo*/
-
-
-  /* o none disse é breakpoint */ 
-@media (min-width: 400px) {
-    body {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 600px) {
-    body {
-        font-size: 18px;
-    }
-}
-
-
-/*           ------- HEADER GERAL MENU, TEXTO --------        */
-
-header {
-    height: 70vh;
-    display: flex;
-    /* flex : Macete para centralizar vertivalmente, transforma tudo em coluna */
-    justify-content: center;
-    align-items: center;
-}
-
-
-/*           ------- CLASSE MENU --------        */
-
-
-/* chamando uma classe do HTML, usa um ponto */
-
-.menu {
-    background-color: white;
-    /*barra fica branca*/
-    position: fixed;
-    top: 0;
-    /* o position fixa o menu e o top deixa ele fixado no topo da tela sempre nas rolagens tb */
-    width: 100vw;
-    /* box-shadow: aqua 10px 10px 50px 0px; cor, deslocamento do eixo x, deslocamento do eixo y, qual nítido ou esfumaçando é a sombra, 
+                /* o none disse é breakpoint */
+                
+                @media (min-width: 400px) {
+                    body {
+                        font-size: 14px;
+                    }
+                }
+                
+                @media (min-width: 600px) {
+                    body {
+                        font-size: 18px;
+                    }
+                }
+                /*           ------- HEADER GERAL MENU, TEXTO --------        */
+                
+                header {
+                    height: 100vh;
+                    display: flex;
+                    /* flex : Macete para centralizar verticalmente e horizontalmente */
+                    justify-content: center;
+                    /* alinha na horizontal */
+                    align-items: center;
+                    /* alinha na vertical */
+                }
+                /*           ------- CLASSE MENU --------        */
+                /* chamando uma classe do HTML, usa um ponto */
+                
+                .menu {
+                    background-color: white;
+                    /*barra fica branca*/
+                    position: fixed;
+                    top: 0;
+                    /* o position fixa o menu e o top deixa ele fixado no topo da tela sempre nas rolagens tb */
+                    width: 100vw;
+                    /* box-shadow: aqua 10px 10px 50px 0px; cor, deslocamento do eixo x, deslocamento do eixo y, qual nítido ou esfumaçando é a sombra, 
     escala da sombra, se for 0 é o mesmo tamanho da caixa. */
-}
-
-.menu li {
-    list-style: none;
-    /*tira bullets*/
-}
-
-.menu ul {
-    display: flex;
-    /*um ao lado do outro*/
-    justify-content: space-around;
-    /*inclui um espaço entre as colunas */
-}
-
-.menu a {
-    display: block;
-    padding: 10px 20px;
-    background-color: revert;
-}
-
-
-/*           ------- CLASSE SITE-SUBTTLE/TITLE --------        */
-
-
-/* abaixo aproveitamos duas classes com os mesmos atributos e nao precisamos escrever duas vezes o código. bota uma classe, virgula e depois a outra com os atributos iguais. */
-
-.site-subtitle,
-.site-title {
-    color: whitesmoke;
-    text-align: center;
-}
-
-.site-title {
-    font-size: 2em;
-}
-
-.site-subtitle {
-    font-style: italic;
-}
-
-
-/*           ------- CLASSE IMAGEM - IMG-PORTFOLIO -------      */
-
-.img-portfolio {
-    width: 180px;
-    height: 180px;
-}
-
-
-/*           ------- TEXT-DECORATIONS ISOLADAS --------        */
-
-
-/*text-decoration:  dependendo da tag faz várias alterações no texto. no caso de um link , tag <a> ele já está padrão underline, se quiser tirar o sublinhado, bota none; */
-
-a {
-    color: teal;
-    text-decoration: none;
-}
-
-
-/*existem pseudo-classes, já previamente existentes como passar o mouse no link e acontecer algo. no caso do link <a> chamando hover (passando o mouse) pode colocar mais atributos assim: a:hover {text-decoration: underline;}, no a: active {} é quando aperta o link. ver: https://www.w3schools.com/css/css_link.asp
+                }
+                
+                .menu li {
+                    list-style: none;
+                    /*tira bullets*/
+                }
+                
+                .menu ul {
+                    display: flex;
+                    /*um ao lado do outro*/
+                    justify-content: space-around;
+                    /* da esquerda para a direita do conteiner*/
+                    /*inclui um espaço entre as colunas */
+                }
+                
+                .menu a {
+                    display: block;
+                    padding: 10px 20px;
+                    background-color: revert;
+                }
+                /*           ------- CLASSE SITE-SUBTTLE/TITLE --------        */
+                /* abaixo aproveitamos duas classes com os mesmos atributos e nao precisamos escrever duas vezes o código. bota uma classe, virgula e depois a outra com os atributos iguais. */
+                
+                .site-subtitle,
+                .site-title {
+                    color: whitesmoke;
+                    text-align: center;
+                    list-style: height 2.5em;
+                }
+                
+                .site-title {
+                    font-size: 2em;
+                    font-family: 'Roboto', sans-serif;
+                    margin-bottom: 30px;
+                }
+                
+                .site-subtitle {
+                    font-style: italic;
+                    font-family: 'Roboto Condensed', sans-serif;
+                    line-height: 1.4em;
+                }
+                /*           ------- CLASSE IMAGEM - IMG-PORTFOLIO / PROJETOS-------      */
+                
+                .portfolio h2 {
+                    font-family: 'Roboto', sans-serif;
+                    color: whitesmoke;
+                    margin-bottom: 0.5em;
+                    font-size: 2em;
+                }
+                
+                .portfolio {
+                    padding: 2em;
+                }
+                
+                .portfolio .grid {
+                    display: grid;
+                    /*faz um display de grade*/
+                    gap: 2em;
+                }
+                
+                @media (min-width: 400px) {
+                    .portfolio .grid {
+                        /*Aqui faz espaçamento do grid*/
+                        grid-template-columns: 240px 240px;
+                    }
+                }
+                
+                @media (min-width: 800px) {
+                    .portfolio .grid {
+                        /*Aqui faz espaçamento do grid*/
+                        grid-template-columns: 240px 240px 240px;
+                        align-items: center;
+                        justify-content: center;
+                        height: calc(100vh - 48px - 8em);
+                    }
+                }
+                
+                .portfolio figure {
+                    text-align: center;
+                }
+                
+                .img-portfolio {
+                    height: 180px;
+                    width: 240px;
+                }
+                /*           ------- TEXT-DECORATIONS ISOLADAS --------        */
+                /*text-decoration:  dependendo da tag faz várias alterações no texto. no caso de um link , tag <a> ele já está padrão underline, se quiser tirar o sublinhado, bota none; */
+                
+                a {
+                    color: teal;
+                    text-decoration: none;
+                }
+                /*existem pseudo-classes, já previamente existentes como passar o mouse no link e acontecer algo. no caso do link <a> chamando hover (passando o mouse) pode colocar mais atributos assim: a:hover {text-decoration: underline;}, no a: active {} é quando aperta o link. ver: https://www.w3schools.com/css/css_link.asp
   */
-
-a:hover {
-    text-decoration: underline;
-}
-
-
-/* Todas os seletores que estejam dentro da classe menu irão receber determinados estilos, assim vamos alterar apenas as listas da classe menu e não de todo o site, fazendo .classe _ espaço _ seletor {estilos} */
+                
+                a:hover {
+                    text-decoration: underline;
+                }
+                /* Todas os seletores que estejam dentro da classe menu irão receber determinados estilos, assim vamos alterar apenas as listas da classe menu e não de todo o site, fazendo .classe _ espaço _ seletor {estilos} */
